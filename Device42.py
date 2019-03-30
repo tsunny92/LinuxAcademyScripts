@@ -96,10 +96,10 @@ def selectoption(argument):
 	func = switcher.get(argument, lambda :'Invalid option exiting the script')
     	return func()
 
-if choice != '1' or choice != '2' or choice != '3':
+if choice == '1' or choice == '2' or choice == '3':
+	selectoption(int(choice))
+else:	
 	try:
 		print(selectoption(int(choice)))
 	except ValueError:
 		print("Kindly provide valid option in number")
-else:
-	selectoption(int(choice))
